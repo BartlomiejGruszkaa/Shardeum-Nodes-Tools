@@ -1,6 +1,9 @@
 #!/bin/bash
 
-sudo apt update && apt install expect -y && apt install nano &&sudo apt install apt-transport-https ca-certificates curl software-properties-common -y && curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - && sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" && apt-cache policy docker-ce && sudo apt install docker-ce -y && sudo apt install parallel -y && sudo apt install bc
+sudo apt update && sudo apt install -y expect nano apt-transport-https ca-certificates curl software-properties-common parallel bc && \
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - && \
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" && \
+sudo apt update && sudo apt install -y docker-ce
 
 liczba_kontenerow=127
 portt1=8080
